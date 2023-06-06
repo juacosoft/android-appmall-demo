@@ -21,4 +21,33 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <item name="elevation">0px</item>
     </style>
+    <style name="App.Title" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/monoBlack</item>
+    </style>
+    <style name="App.paragraph" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/monoBlack</item>
+    </style>
+    <style name="CardButtomCreate" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">10dp</item>
+        <item name="cardBackgroundColor">@color/monoDarkgrey</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    <style name="TitleButtonCreate" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="SubTitleButtonCreate" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
 </resources>

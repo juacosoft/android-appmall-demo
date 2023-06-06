@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/create_app_navgraph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/create_app_navgraph"
+    app:startDestination="@id/createAppStartFragment">
 
+
+    <fragment
+        android:id="@+id/createAppStartFragment"
+        android:name="com.hackaton.appmall.presentacion.ui.createapp.view.CreateAppStartFragment"
+        android:label="CreateAppStartFragment"
+        tools:layout="@layout/fragment_create_appstart"/>
 </navigation>

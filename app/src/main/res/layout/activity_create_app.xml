@@ -18,16 +18,17 @@
             app:navigationIcon="@drawable/ic_back_arrow"/>
 
     </com.google.android.material.appbar.AppBarLayout>
+
     <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/navHostFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:id="@+id/navHostFragment"
-        app:navGraph="@navigation/create_app_navgraph"
         app:defaultNavHost="true"
-        app:layout_constraintTop_toTopOf="@+id/appBarLayout"
-        app:layout_constraintBottom_toBottomOf="@+id/appBarLayout"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:navGraph="@navigation/create_app_navgraph" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

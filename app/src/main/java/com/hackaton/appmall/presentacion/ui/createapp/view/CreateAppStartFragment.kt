@@ -6,11 +6,12 @@ import com.hackaton.appmall.presentacion.BaseFragment
 class CreateAppStartFragment : BaseFragment<FragmentCreateAppstartBinding> (
     FragmentCreateAppstartBinding::inflate
 ) {
+
     override fun onViews() {
-        TODO("Not yet implemented")
+
     }
 
     override fun onViewModels() {
-        TODO("Not yet implemented")
+
     }
 }

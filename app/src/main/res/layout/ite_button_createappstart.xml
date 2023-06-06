@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:checkable="true"
+    style="@style/CardButtomCreate"
+    app:layout_constraintTop_toBottomOf="@+id/tvParagraphCreateAnApp"
+    android:layout_marginTop="28dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline01"
+            android:layout_width="100dp"
+            android:layout_height="61dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline01"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="8dp"
+            android:background="@drawable/round_background"
+            app:tint="@color/monoDarkgrey"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/guideline01"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/title_btn_start_from_scratch"
+            app:layout_constraintBottom_toTopOf="@+id/tvParagraphCreateAnApp"
+
+            style="@style/TitleButtonCreate"/>
+        <TextView
+            android:id="@+id/tvParagraphCreateAnApp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/guideline01"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/title_btn_start_from_scratch"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            style="@style/SubTitleButtonCreate"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
