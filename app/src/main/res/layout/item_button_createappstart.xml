@@ -19,6 +19,7 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.3" />
         <ImageView
+            android:id="@+id/BCimageView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +37,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:text="@string/title_btn_start_from_scratch"
             app:layout_constraintBottom_toTopOf="@+id/tvParagraphCreateAnApp"
-
+            android:id="@+id/tvTitleCreateAnApp"
             style="@style/TitleButtonCreate"/>
         <TextView
             android:id="@+id/tvParagraphCreateAnApp"
