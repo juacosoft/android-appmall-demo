@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/createAppChoiceSubCategoryFragment"
-        android:name="com.hackaton.appmall.presentacion.ui.createapp.CreateAppChoiceSubCategoryFragment"
+        android:name="com.hackaton.appmall.presentacion.ui.createapp.choicesubcategory.CreateAppChoiceSubCategoryFragment"
         android:label="CreateAppChoiceSubCategoryFragment"
         tools:layout="@layout/fragment_createapp_choicesubcategory"/>
 </navigation>

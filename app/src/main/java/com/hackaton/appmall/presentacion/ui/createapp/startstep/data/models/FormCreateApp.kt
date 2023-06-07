@@ -11,7 +11,7 @@ class FormCreateApp private constructor(
 
     class Builder(
         var nameShop: String? = null,
-        var categoryApp: CategoryApp,
+        var categoryApp: CategoryApp? = null,
         var tags: List<String>? = null,
         var publico: String? = null,
         var pais: String? = null,
@@ -31,7 +31,7 @@ class FormCreateApp private constructor(
 
         fun build(): FormCreateApp {
             return FormCreateApp(
-                categoryApp = categoryApp,
+                categoryApp = categoryApp?: CategoryApp("No Selected", 0),
                 nameShop = nameShop?: "",
                 tags = tags?: listOf(),
                 publico = publico?: "",
@@ -43,6 +43,7 @@ class FormCreateApp private constructor(
 
 
 }
+
 
 data class CategoryApp (
     private val name:String,

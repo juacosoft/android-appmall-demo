@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppMall"
+        android:name=".AppMallApplication"
         tools:targetApi="31">
         <activity
             android:name=".presentacion.ui.createapp.startstep.view.CreateAppActivity"

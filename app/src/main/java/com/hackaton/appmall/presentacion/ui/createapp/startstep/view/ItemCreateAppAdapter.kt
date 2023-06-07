@@ -7,7 +7,9 @@ import com.hackaton.appmall.data.mock.MockMenusCreateButton
 import com.hackaton.appmall.databinding.ItemButtonCreateappstartBinding
 import com.hackaton.appmall.presentacion.ui.createapp.startstep.data.models.ItemButtonsCreate
 
-class ItemCreateAppAdapter: RecyclerView.Adapter<ItemCreateAppAdapter.ItemsViewHolder>(){
+class ItemCreateAppAdapter (
+    private val onItemClick: (ItemButtonsCreate) -> Unit
+        ): RecyclerView.Adapter<ItemCreateAppAdapter.ItemsViewHolder>(){
 
     private var items: List<ItemButtonsCreate> = MockMenusCreateButton.getMenus()
 
@@ -35,6 +37,9 @@ class ItemCreateAppAdapter: RecyclerView.Adapter<ItemCreateAppAdapter.ItemsViewH
             }
             itemBinding.tvTitleCreateAnApp.text = item.title
             itemBinding.tvParagraphCreateAnApp.text = item.subTitle
+            itemBinding.root.setOnClickListener {
+                onItemClick(item)
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.hackaton.appmall.presentacion.ui.createapp
+package com.hackaton.appmall.presentacion.ui.createapp.choicesubcategory
 
 import com.hackaton.appmall.databinding.FragmentCreateappChoicesubcategoryBinding
 import com.hackaton.appmall.presentacion.BaseFragment
@@ -7,10 +7,10 @@ class CreateAppChoiceSubCategoryFragment : BaseFragment<FragmentCreateappChoices
     FragmentCreateappChoicesubcategoryBinding::inflate
 ) {
     override fun onViews() {
-        TODO("Not yet implemented")
+
     }
 
     override fun onViewModels() {
-        TODO("Not yet implemented")
+
     }
 }

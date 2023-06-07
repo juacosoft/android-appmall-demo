@@ -3,4 +3,7 @@
     <string name="title_create_an_app">Create an App</string>
     <string name="paragraph_create_app">Create your mobile app without knowing how to program</string>
     <string name="title_btn_start_from_scratch">Start from scratch</string>
+    <string name="title_choice_a_template">Choice a template</string>
+    <string name="subtitle_choiceatemplate">¿How would you like to categorize your company in the app?</string>
+    <string name="text_submit">Submit</string>
 </resources>

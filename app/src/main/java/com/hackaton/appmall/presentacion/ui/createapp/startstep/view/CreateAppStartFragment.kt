@@ -1,10 +1,10 @@
 package com.hackaton.appmall.presentacion.ui.createapp.startstep.view
 
-import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.hackaton.appmall.databinding.FragmentCreateAppstartBinding
 import com.hackaton.appmall.presentacion.BaseFragment
-import com.hackaton.appmall.presentacion.ui.createapp.CreateAppViewModel
+import com.hackaton.appmall.presentacion.ui.createapp.startstep.data.ButtomCreateAction
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -12,10 +12,15 @@ class CreateAppStartFragment : BaseFragment<FragmentCreateAppstartBinding> (
     FragmentCreateAppstartBinding::inflate
 ) {
 
-    private val activityViewModel: CreateAppViewModel by activityViewModels()
-
     private val adapterMenuCreate: ItemCreateAppAdapter by lazy {
-        ItemCreateAppAdapter()
+        ItemCreateAppAdapter { item ->
+            when (item.action) {
+                ButtomCreateAction.FROM_SCRATCH -> {
+                    findNavController().navigate(CreateAppStartFragmentDirections.actionCreateAppStartFragmentToCreateAppChoiceTemFragment())
+                }
+                ButtomCreateAction.NO_ACTION -> Unit
+            }
+        }
     }
 
     override fun onViews() {
@@ -25,10 +30,7 @@ class CreateAppStartFragment : BaseFragment<FragmentCreateAppstartBinding> (
             adapter = adapterMenuCreate
             layoutManager = linearLayoutManager
         }
-
     }
 
-    override fun onViewModels() {
-
-    }
+    override fun onViewModels() = Unit
 }

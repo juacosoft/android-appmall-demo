@@ -5,7 +5,9 @@ import android.os.Bundle
 import com.hackaton.appmall.R
 import com.hackaton.appmall.databinding.ActivityCreateAppBinding
 import com.hackaton.appmall.presentacion.ui.createapp.startstep.view.CreateAppActivity
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private val binding: ActivityCreateAppBinding by lazy {
