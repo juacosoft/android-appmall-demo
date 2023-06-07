@@ -13,7 +13,7 @@
         android:theme="@style/Theme.AppMall"
         tools:targetApi="31">
         <activity
-            android:name=".presentacion.ui.createapp.view.CreateAppActivity"
+            android:name=".presentacion.ui.createapp.startstep.view.CreateAppActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.hackaton.appmall.R
 import com.hackaton.appmall.databinding.ActivityCreateAppBinding
-import com.hackaton.appmall.presentacion.ui.createapp.view.CreateAppActivity
+import com.hackaton.appmall.presentacion.ui.createapp.startstep.view.CreateAppActivity
 
 class MainActivity : AppCompatActivity() {
 

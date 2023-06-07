@@ -4,11 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/create_app_navgraph"
     app:startDestination="@id/createAppStartFragment">
-
-
     <fragment
         android:id="@+id/createAppStartFragment"
-        android:name="com.hackaton.appmall.presentacion.ui.createapp.view.CreateAppStartFragment"
+        android:name="com.hackaton.appmall.presentacion.ui.createapp.startstep.view.CreateAppStartFragment"
         android:label="CreateAppStartFragment"
-        tools:layout="@layout/fragment_create_appstart"/>
+        tools:layout="@layout/fragment_create_appstart">
+        <action
+            android:id="@+id/action_createAppStartFragment_to_createAppChoiceTemFragment"
+            app:destination="@id/createAppChoiceTemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAppChoiceTemFragment"
+        android:name="com.hackaton.appmall.presentacion.ui.createapp.choicetemplate.view.CreateAppChoiceCategoryFragment"
+        android:label="CreateAppChoiceTemFragment"
+        tools:layout="@layout/fragment_createapp_choice_category">
+        <action
+            android:id="@+id/action_createAppChoiceTemFragment_to_createAppChoiceSubCategoryFragment"
+            app:destination="@id/createAppChoiceSubCategoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAppChoiceSubCategoryFragment"
+        android:name="com.hackaton.appmall.presentacion.ui.createapp.CreateAppChoiceSubCategoryFragment"
+        android:label="CreateAppChoiceSubCategoryFragment"
+        tools:layout="@layout/fragment_createapp_choicesubcategory"/>
 </navigation>

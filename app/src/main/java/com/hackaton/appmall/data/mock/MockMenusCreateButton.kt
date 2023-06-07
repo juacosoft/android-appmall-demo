@@ -1,8 +1,8 @@
 package com.hackaton.appmall.data.mock
 
 import com.hackaton.appmall.R
-import com.hackaton.appmall.presentacion.ui.createapp.data.ButtomCreateAction
-import com.hackaton.appmall.presentacion.ui.createapp.data.models.ItemButtonsCreate
+import com.hackaton.appmall.presentacion.ui.createapp.startstep.data.ButtomCreateAction
+import com.hackaton.appmall.presentacion.ui.createapp.startstep.data.models.ItemButtonsCreate
 
 object MockMenusCreateButton {
 

@@ -1,11 +1,11 @@
-package com.hackaton.appmall.presentacion.ui.createapp.view
+package com.hackaton.appmall.presentacion.ui.createapp.startstep.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.hackaton.appmall.data.mock.MockMenusCreateButton
 import com.hackaton.appmall.databinding.ItemButtonCreateappstartBinding
-import com.hackaton.appmall.presentacion.ui.createapp.data.models.ItemButtonsCreate
+import com.hackaton.appmall.presentacion.ui.createapp.startstep.data.models.ItemButtonsCreate
 
 class ItemCreateAppAdapter: RecyclerView.Adapter<ItemCreateAppAdapter.ItemsViewHolder>(){
 

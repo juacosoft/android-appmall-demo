@@ -1,8 +1,8 @@
-package com.hackaton.appmall.presentacion.ui.createapp.data.models
+package com.hackaton.appmall.presentacion.ui.createapp.startstep.data.models
 
 import android.graphics.drawable.Drawable
 import androidx.annotation.DrawableRes
-import com.hackaton.appmall.presentacion.ui.createapp.data.ButtomCreateAction
+import com.hackaton.appmall.presentacion.ui.createapp.startstep.data.ButtomCreateAction
 
 data class ItemButtonsCreate(
     val title: String,
