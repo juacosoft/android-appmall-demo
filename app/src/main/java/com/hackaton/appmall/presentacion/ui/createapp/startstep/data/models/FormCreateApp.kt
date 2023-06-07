@@ -6,7 +6,8 @@ class FormCreateApp private constructor(
     private val tags: List<String>,
     private val publico: String?,
     private val pais: String,
-    private val diseno: String
+    private val diseno: String,
+    private val subCategory: String
 ) {
 
     class Builder(
@@ -15,7 +16,8 @@ class FormCreateApp private constructor(
         var tags: List<String>? = null,
         var publico: String? = null,
         var pais: String? = null,
-        var diseno: String? = null
+        var diseno: String? = null,
+        var subCategory: String? = null
     ){
         fun setNameShop(nameShop: String) = apply { this.nameShop = nameShop }
 
@@ -29,6 +31,8 @@ class FormCreateApp private constructor(
 
         fun setDiseno(diseno: String) = apply { this.diseno = diseno }
 
+        fun setSubCategory(subCategory: String) = apply { this.subCategory = subCategory }
+
         fun build(): FormCreateApp {
             return FormCreateApp(
                 categoryApp = categoryApp?: CategoryApp("No Selected", 0),
@@ -36,7 +40,8 @@ class FormCreateApp private constructor(
                 tags = tags?: listOf(),
                 publico = publico?: "",
                 pais = pais?: "",
-                diseno = diseno?: ""
+                diseno = diseno?: "",
+                subCategory = subCategory?: ""
             )
         }
     }

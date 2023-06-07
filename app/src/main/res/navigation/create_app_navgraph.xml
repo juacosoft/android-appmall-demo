@@ -24,7 +24,16 @@
     </fragment>
     <fragment
         android:id="@+id/createAppChoiceSubCategoryFragment"
-        android:name="com.hackaton.appmall.presentacion.ui.createapp.choicesubcategory.CreateAppChoiceSubCategoryFragment"
+        android:name="com.hackaton.appmall.presentacion.ui.createapp.choicesubcategory.view.CreateAppChoiceSubCategoryFragment"
         android:label="CreateAppChoiceSubCategoryFragment"
-        tools:layout="@layout/fragment_createapp_choicesubcategory"/>
+        tools:layout="@layout/fragment_createapp_choicesubcategory">
+        <action
+            android:id="@+id/action_createAppChoiceSubCategoryFragment_to_formCreateAppFragment"
+            app:destination="@id/formCreateAppFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/formCreateAppFragment"
+        android:name="com.hackaton.appmall.presentacion.ui.createapp.form.view.FormCreateAppFragment"
+        android:label="FormCreateAppFragment"
+        tools:layout="@layout/fragment_form_create_app"/>
 </navigation>

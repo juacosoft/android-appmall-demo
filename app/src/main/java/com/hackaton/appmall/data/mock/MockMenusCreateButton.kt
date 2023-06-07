@@ -1,6 +1,7 @@
 package com.hackaton.appmall.data.mock
 
 import com.hackaton.appmall.R
+import com.hackaton.appmall.presentacion.ui.createapp.choicesubcategory.data.SubCategoryItem
 import com.hackaton.appmall.presentacion.ui.createapp.startstep.data.ButtomCreateAction
 import com.hackaton.appmall.presentacion.ui.createapp.startstep.data.models.ItemButtonsCreate
 
@@ -28,5 +29,13 @@ object MockMenusCreateButton {
             subTitle = "Receive orders through your online store.",
             action = ButtomCreateAction.NO_ACTION
         )
+    )
+
+    fun getSubCategories()= listOf(
+        SubCategoryItem("Digital product app"),
+        SubCategoryItem("Food store app"),
+        SubCategoryItem("Clothing store app"),
+        SubCategoryItem("Accesories store app"),
+        SubCategoryItem("Bookstore app")
     )
 }

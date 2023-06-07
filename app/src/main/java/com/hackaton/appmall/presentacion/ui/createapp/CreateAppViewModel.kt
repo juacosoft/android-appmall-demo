@@ -14,4 +14,8 @@ class CreateAppViewModel @Inject constructor() : ViewModel(){
     fun setCategoryApp(categoryApp: CategoryApp){
         formCreateApp.setCategoryApp(categoryApp)
     }
+
+    fun setSubCategory(subCategory: String){
+        formCreateApp.setSubCategory(subCategory)
+    }
 }
