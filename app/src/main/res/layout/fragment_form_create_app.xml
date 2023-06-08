@@ -1,6 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="30dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvTitleCreateAnApp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/title_choice_a_template"
+            android:padding="8dp"
+            style="@style/App.Title"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tfAppname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleCreateAnApp"
+            android:hint="@string/hint_app_name">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:maxLines="2"
+            android:id="@+id/tvParagraphCreateAnApp"
+            android:layout_marginTop="12dp"
+            style="@style/App.paragraph"
+            android:text="@string/subtitle_what_goals"
+            app:layout_constraintTop_toBottomOf="@+id/tfAppname"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkboxGroups"
+            app:layout_constraintTop_toBottomOf="@+id/tvParagraphCreateAnApp"
+            android:orientation="vertical">
+            <CheckBox
+                android:id="@+id/cbSellProducts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:checked="false"
+                style="@style/CheckBox"
+                android:text="Sell products"/>
+            <CheckBox
+                android:id="@+id/cbProvideServices"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/CheckBox"
+                android:text="Provide services"/>
+            <CheckBox
+                android:id="@+id/cbPromoteBusiness"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/CheckBox"
+                android:text="Promote a business"/>
+            <CheckBox
+                android:id="@+id/cbObtainPotentialCustomers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/CheckBox"
+                android:text="Obtain potential customers"/>
+            <CheckBox
+                android:id="@+id/cbSelfPromote"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/CheckBox"
+                android:text="Self-promote"/>
+            <CheckBox
+                android:id="@+id/cbBuildCommunity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/CheckBox"
+                android:text="Build a community"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnStoreLocation"
+            app:layout_constraintTop_toBottomOf="@+id/checkboxGroups"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Store Location"
+            android:textColor="@color/monoDarkgrey"
+            android:paddingVertical="8dp"
+            android:drawableEnd="@drawable/ic_arrow_bottomright"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        <Button
+            android:id="@+id/btnExpectedTypeOfCustomers"
+            app:layout_constraintTop_toBottomOf="@+id/btnStoreLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Expected type of customers"
+            android:textColor="@color/monoDarkgrey"
+            android:paddingVertical="8dp"
+            android:drawableEnd="@drawable/ic_arrow_bottomright"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        <Button
+            android:id="@+id/btnChooseAStyle"
+            app:layout_constraintTop_toBottomOf="@+id/btnExpectedTypeOfCustomers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose a style"
+            android:textColor="@color/monoDarkgrey"
+            android:paddingVertical="8dp"
+            android:drawableEnd="@drawable/ic_arrow_bottomright"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Generate Template"
+            android:layout_marginTop="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnChooseAStyle"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginBottom="20dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

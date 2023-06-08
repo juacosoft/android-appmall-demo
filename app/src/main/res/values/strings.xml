@@ -6,4 +6,6 @@
     <string name="title_choice_a_template">Choice a template</string>
     <string name="subtitle_choiceatemplate">¿How would you like to categorize your company in the app?</string>
     <string name="text_submit">Submit</string>
+    <string name="hint_app_name">App name</string>
+    <string name="subtitle_what_goals">What are the goals of the app?</string>
 </resources>
