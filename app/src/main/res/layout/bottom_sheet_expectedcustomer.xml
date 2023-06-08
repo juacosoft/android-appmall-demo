@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bs_storelocation"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="18dp"
+            android:orientation="vertical">
+            <CheckBox
+                android:id="@+id/cbAge18_30"
+                android:layout_width="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:text="Aged 18 - 30"
+                style="@style/CheckBox"/>
+            <CheckBox
+                android:id="@+id/cbAge31_40"
+                android:layout_width="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbAge18_30"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:text="Aged 30 - 40"
+                style="@style/CheckBox"/>
+            <CheckBox
+                android:id="@+id/cbAge41_50"
+                android:layout_width="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbAge31_40"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:text="More 40"
+                style="@style/CheckBox"/>
+            <CheckBox
+                android:id="@+id/cblocalCustomer"
+                android:layout_width="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbAge31_40"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:text="Local Customer"
+                style="@style/CheckBox"/>
+
+            <CheckBox
+                android:id="@+id/cbinternacionalCustomer"
+                android:layout_width="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbAge31_40"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:text="International Customer"
+                style="@style/CheckBox"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="Submit"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
