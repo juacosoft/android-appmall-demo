@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Login / SignIn"
+        android:id="@+id/menu_home_login"/>
+    <item android:title="Categories"
+        android:id="@+id/menu_home_categorias"/>
+    <item android:title="Create your M-Commerce"
+        android:id="@+id/menu_home_createapp"/>
+    <item android:title="Who we are"
+        android:id="@+id/menu_home_whoweare"/>
+    <item android:title="Why work with us"
+        android:id="@+id/menu_home_whywork"/>
+    <item android:title="Statistics and reports"
+        android:id="@+id/menu_home_stadistics"/>
+</menu>
