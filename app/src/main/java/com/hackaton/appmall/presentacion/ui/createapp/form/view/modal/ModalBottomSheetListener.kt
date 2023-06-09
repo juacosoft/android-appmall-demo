@@ -1,6 +1,6 @@
 package com.hackaton.appmall.presentacion.ui.createapp.form.view.modal
 
-interface ModalStoreLocationListener {
+interface ModalBottomSheetListener {
     fun onOk()
     fun onDismiss()
 }

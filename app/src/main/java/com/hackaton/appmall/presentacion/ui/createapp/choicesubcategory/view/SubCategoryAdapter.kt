@@ -4,16 +4,16 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.hackaton.appmall.R
-import com.hackaton.appmall.data.mock.MockMenusCreateButton
 import com.hackaton.appmall.databinding.ItemSubcategorylistBinding
+import com.hackaton.appmall.presentacion.ui.createapp.choicesubcategory.data.SubCategoryItem
 
 class SubCategoryAdapter (
-    private val onItemClick: (String) -> Unit
+    private val onItemClick: (String) -> Unit,
+    private val items: List<SubCategoryItem>
 ) : RecyclerView.Adapter<SubCategoryAdapter.ViewHolder>() {
 
     var selectedItem: Int? = null
 
-    private val items = MockMenusCreateButton.getSubCategories()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
         ViewHolder(

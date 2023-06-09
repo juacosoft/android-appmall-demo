@@ -1,6 +1,7 @@
 package com.hackaton.appmall.presentacion.ui.createapp
 
 import androidx.lifecycle.ViewModel
+import com.hackaton.appmall.presentacion.ui.createapp.form.data.StoreLocationModel
 import com.hackaton.appmall.presentacion.ui.createapp.startstep.data.models.CategoryApp
 import com.hackaton.appmall.presentacion.ui.createapp.startstep.data.models.FormCreateApp
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -17,5 +18,15 @@ class CreateAppViewModel @Inject constructor() : ViewModel(){
 
     fun setSubCategory(subCategory: String){
         formCreateApp.setSubCategory(subCategory)
+    }
+
+    fun setFinishStep(
+        storeLocationModel: StoreLocationModel?,
+        expectedCustomer: List<String>,
+        styleTemplate: String
+    ) {
+        formCreateApp.setStoreLocation(storeLocationModel)
+        formCreateApp.setPublico(expectedCustomer.joinToString(", "))
+        formCreateApp.setDiseno(styleTemplate)
     }
 }

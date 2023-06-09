@@ -2,6 +2,7 @@ package com.hackaton.appmall.presentacion.ui.createapp.choicesubcategory.view
 
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import com.hackaton.appmall.data.mock.MockMenusCreateButton
 import com.hackaton.appmall.databinding.FragmentCreateappChoicesubcategoryBinding
 import com.hackaton.appmall.presentacion.BaseFragment
 import com.hackaton.appmall.presentacion.ui.createapp.CreateAppViewModel
@@ -17,9 +18,9 @@ class CreateAppChoiceSubCategoryFragment : BaseFragment<FragmentCreateappChoices
     private var subCategorySelected: String? = null
 
     private val adapter: SubCategoryAdapter by lazy {
-        SubCategoryAdapter{
+        SubCategoryAdapter(onItemClick = {
             subCategorySelected = it
-        }
+        },items = MockMenusCreateButton.getSubCategories())
     }
 
     override fun onViews() {

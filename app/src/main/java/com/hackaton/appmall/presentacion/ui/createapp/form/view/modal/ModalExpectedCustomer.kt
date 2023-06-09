@@ -10,13 +10,15 @@ import com.hackaton.appmall.databinding.BottomSheetExpectedcustomerBinding
 
 class ModalExpectedCustomer: BottomSheetDialogFragment() {
 
-    private var listener: ModalStoreLocationListener? = null
+    private var listener: ModalExpectedCustomerListener? = null
     private var _binding : BottomSheetExpectedcustomerBinding? = null
     private val binding get() = _binding!!
 
+    private val listExpecteCustomer:MutableList<String> = mutableListOf()
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        listener = context as? ModalStoreLocationListener
+        listener = context as? ModalExpectedCustomerListener
     }
 
     override fun onDetach() {
@@ -35,7 +37,36 @@ class ModalExpectedCustomer: BottomSheetDialogFragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        with(binding){
+            btnSubmit.setOnClickListener {
+                if(cbAge1830.isChecked) {
+                    listExpecteCustomer.add(cbAge1830.text.toString())
+                }
+                if(cbAge3140.isChecked) {
+                    listExpecteCustomer.add(cbAge3140.text.toString())
+                }
+                if(cbAge4150.isChecked) {
+                    listExpecteCustomer.add(cbAge4150.text.toString())
+                }
+                if(cblocalCustomer.isChecked) {
+                    listExpecteCustomer.add(cblocalCustomer.text.toString())
+                }
+                if(cbinternacionalCustomer.isChecked) {
+                    listExpecteCustomer.add(cbinternacionalCustomer.text.toString())
+                }
+                listener?.onClickOk(listExpecteCustomer)
+                dismiss()
+            }
+        }
+    }
+
     companion object {
-        const val TAG = "ModalStoreLocation"
+        const val TAG = "ModalExpectedCustomer"
+    }
+
+    interface ModalExpectedCustomerListener {
+        fun onClickOk(styleSelected: List<String>)
     }
 }

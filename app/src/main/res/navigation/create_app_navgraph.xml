@@ -11,7 +11,9 @@
         tools:layout="@layout/fragment_create_appstart">
         <action
             android:id="@+id/action_createAppStartFragment_to_createAppChoiceTemFragment"
-            app:destination="@id/createAppChoiceTemFragment" />
+            app:destination="@id/createAppChoiceTemFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/createAppChoiceTemFragment"
@@ -20,7 +22,9 @@
         tools:layout="@layout/fragment_createapp_choice_category">
         <action
             android:id="@+id/action_createAppChoiceTemFragment_to_createAppChoiceSubCategoryFragment"
-            app:destination="@id/createAppChoiceSubCategoryFragment" />
+            app:destination="@id/createAppChoiceSubCategoryFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/createAppChoiceSubCategoryFragment"
@@ -29,7 +33,9 @@
         tools:layout="@layout/fragment_createapp_choicesubcategory">
         <action
             android:id="@+id/action_createAppChoiceSubCategoryFragment_to_formCreateAppFragment"
-            app:destination="@id/formCreateAppFragment" />
+            app:destination="@id/formCreateAppFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/formCreateAppFragment"
