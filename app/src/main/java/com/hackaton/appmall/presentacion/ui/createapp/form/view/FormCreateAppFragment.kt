@@ -37,8 +37,9 @@ class FormCreateAppFragment :BaseFragment<FragmentFormCreateAppBinding>(
             }
             binding.btnSubmit.setOnClickListener {
                 createAppViewModel.setFinishStep(
-                    storeLocationModel,
-                    expectedCustomer?: emptyList()
+                    storeLocationModel = storeLocationModel,
+                    expectedCustomer = expectedCustomer?: emptyList(),
+                    styleTemplate = styleSelected?: ""
                 )
             }
         }
