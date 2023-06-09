@@ -25,6 +25,14 @@ class CreateAppActivity : AppCompatActivity() {
         setContentView(binding.root)
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostContainer) as NavHostFragment
         val navController = navHostFragment.navController
+        binding.topAppBarCreateApp.setNavigationOnClickListener {
+            val currentFragment = navHostFragment.childFragmentManager.fragments.first()
+            if(currentFragment is CreateAppStartFragment) {
+                finish()
+            }else {
+                navController.popBackStack()
+            }
+        }
     }
 
     companion object {

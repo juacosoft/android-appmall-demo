@@ -8,6 +8,7 @@ import com.hackaton.appmall.presentacion.ui.createapp.form.data.StoreLocationMod
 import com.hackaton.appmall.presentacion.ui.createapp.form.view.modal.ModalChoiceStyle
 import com.hackaton.appmall.presentacion.ui.createapp.form.view.modal.ModalExpectedCustomer
 import com.hackaton.appmall.presentacion.ui.createapp.form.view.modal.ModalStoreLocation
+import com.hackaton.appmall.presentacion.ui.selecttemplate.view.SelectTemplateActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -41,6 +42,7 @@ class FormCreateAppFragment :BaseFragment<FragmentFormCreateAppBinding>(
                     expectedCustomer = expectedCustomer?: emptyList(),
                     styleTemplate = styleSelected?: ""
                 )
+                requireActivity().startActivity(SelectTemplateActivity.createIntent(requireContext()))
             }
         }
 
